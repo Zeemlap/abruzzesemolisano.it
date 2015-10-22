@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="Linq2SqlDataAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="File" Member="Files">
+    <Type Name="File">
+      <Column Name="id" Member="Id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="mimeType" Member="MimeType" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="data" Member="Data" Type="System.Byte[]" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Member="Name" Type="System.String" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Location" Member="Locations">
+    <Type Name="Location">
+      <Column Name="id" Member="Id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="lat" Member="Latitude" Type="System.Double" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="name" Member="Name" Storage="_DefaultName" Type="System.String" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="lng" Member="Longitude" Type="System.Double" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="importanceCategory" Member="ImportanceCategory" Type="int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Location_SampleMetadata" Member="Samples" ThisKey="Id" OtherKey="LocationId" Type="SampleMetadata" />
+    </Type>
+  </Table>
+  <Table Name="SampleMetadata" Member="SampleMetadatas">
+    <Type Name="SampleMetadata">
+      <Column Name="id" Member="Id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Member="Name" Type="System.String" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="gender" Member="Gender" Storage="_GenderAsByte" Type="System.Byte" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="isAnonymous" Member="IsAnonymous" Storage="_IsPublic" Type="System.Boolean" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="yearOfBirth" Member="YearOfBirth" Type="System.Int16" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="motherTongues" Member="MotherTongues" Type="System.String" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="alwaysLivedAtLocation0" Member="AlwaysLivedAtLocation0" Type="System.Boolean" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="yearOfMovingToLocation0" Member="YearOfMovingToLocation0" Type="System.Int16" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="otherInformation" Member="OtherInformation" Type="System.String" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="createdAt" Member="CreatedAt" Type="System.DateTime" DbType="datetime2" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="locationId" Member="LocationId" AutoSync="Never" Type="System.Int32" IsDbGenerated="true" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="translationFileId" Member="TranslationFileId" Type="System.Int32" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="transcriptionFileId" Member="TranscriptionFileId" Type="System.Int32" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sampleDataFileId" Member="SampleDataFileId" Type="System.Int32" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="creatorUserId" Member="CreatorUserId" Type="System.Int32" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="SampleMetadata_SampleMetadataFieldApproval" Member="ApprovedFields" ThisKey="Id" OtherKey="SampleMetadataId" Type="SampleMetadataFieldApproval" />
+      <Association Name="Location_SampleMetadata" Member="Location" ThisKey="LocationId" OtherKey="Id" Type="Location" IsForeignKey="true" />
+      <Association Name="File_SampleMetadata" Member="Translation" ThisKey="TranslationFileId" OtherKey="Id" Type="File" IsForeignKey="true" />
+      <Association Name="File_SampleMetadata1" Member="Transcription" ThisKey="TranscriptionFileId" OtherKey="Id" Type="File" IsForeignKey="true" />
+      <Association Name="File_SampleMetadata2" Member="SampleData" ThisKey="SampleDataFileId" OtherKey="Id" Type="File" IsForeignKey="true" />
+      <Association Name="User_SampleMetadata" Member="CreatorUser" ThisKey="CreatorUserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="User" Member="Users">
+    <Type Name="User">
+      <Column Name="id" Member="Id" AutoSync="Never" Type="System.Int32" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="name" Member="Name" Type="System.String" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="password_salt" Member="PasswordSalt" Type="System.Byte[]" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="password_hash" Member="PasswordHash" Type="System.Byte[]" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="User_SampleMetadata" Member="CreatedSamples" ThisKey="Id" OtherKey="CreatorUserId" Type="SampleMetadata" />
+    </Type>
+  </Table>
+  <Table Name="" Member="SampleMetadataFieldApprovals">
+    <Type Name="SampleMetadataFieldApproval">
+      <Column Name="sampleMetadataId" Member="SampleMetadataId" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="fieldName" Member="FieldName" Type="System.String" DbType="char(32)" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SampleMetadata_SampleMetadataFieldApproval" Member="Approves" ThisKey="SampleMetadataId" OtherKey="Id" Type="SampleMetadata" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,76 @@
+The windows hosting data are below. The password is one of: bettina2015, dejonge2015
+
+Domain name: abruzzesemolisano.it
+Hosting and management services:
+	Control panel url: http://admin.abruzzesemolisano.it
+	Control panel username: 	
+	Control panel password: one of bettina2015, dejonge2015 (can be accessed via/retrieved through http://hosting.aruba.it/Domini/spediscidatidominio.asp?Lang=EN)
+
+SETTINGS FOR WINDOWS HOSTING 
+Here below are the correct settings for this service :
+Complete website address : http://www.abruzzesemolisano.it
+Address of FTP server (to manage the website) : ftp.abruzzesemolisano.it
+Main remote FTP folder : www.abruzzesemolisano.it
+Guides for publishing through FTP : http://kb-en.aruba.it/KB/c354/01-ftp.aspx
+
+Here below is the login and password to manage the service:
+Username: 1639628@aruba.it
+
+
+WINDOWS HOSTING MANAGEMENT
+Absolute path of the website folder: d:\inetpub\webs\nomedominioxxx
+the "domainnamexxx" string must be replaced by the name of the domain (without the www) and its extension, without the "." character between the name of the domain and the extension.
+
+If you need to indicate the path in a php script the “\”character must be replaced with “//”;
+If you need to indicate the path in a perl script the “\”character must be replaced with “/”; 
+
+Upon activation, the following folders with specific proprieties are created within the web space:
+
+cgi-bin : this folder can hold executable files like cgi and others alike. It does not have writing permissions.
+
+public : this folder can hold all the files on which all users must be able to write. It is usually used to hold the counter files, forums or other scripts which need to write in the archive files.
+
+mdb-database : has the same characteristics as the public folder, but its content cannot be "downloaded". It is suitable for holding mdb database files on which asp pages can "work" and write.
+
+app_data: has the same characteristics as the mdb-database folder and is created to use the potential offered by the .NET Framework 3.5/4.0
+
+The default.asp file is the "Under Construction" temporary page and can be easily deleted or edited.
+
+MICROSOFT WEBMATRIX 
+The Windows Hosting service includes the Microsoft WebMatrix application for creating and publishing websites in your web space easily and quickly. MS WebMatrix can be downloaded and installed for free from: http://www.microsoft.com/web/webmatrix/ 
+
+More information is available at: http://kb-en.aruba.it/KB/c810/webmatrix-beta.aspx 
+
+MAIL MANAGEMENT 
+Here are some useful links to find out how to create, manage and check the email accounts of the domain name:
+
+How to access the Control Panel and create the email accounts 
+http://kb-en.aruba.it/KB/a4132/how-to-access-the-mail-admin-control-panel.aspx
+http://kb-en.aruba.it/KB/a4133/how-to-create-domain-email-accounts.aspx
+
+
+Configuration of accounts on email Clients 
+To configure an email account on Outlook and Thunderbird automatically simply create a new account and after entering the name of the account and the password, proceed without clicking on "configure manually". 
+
+Our guides for the auto-configuration are available here: 
+http://kb.aruba.it/KB/a5499/caselle-domini-autoconfigurazione.aspx 
+
+
+For information on how to configure other email Clients, go to the following link:
+http://kb.aruba.it/KB/a5591/videoguide-caselle-domini-configurazione-ssl.aspx 
+
+
+WEBMAIL
+Access to Webmail: http://webmail.aruba.it
+Information on how to use it: http://ticket-en.aruba.it/KB/c556/03-webmail.aspx
+
+
+Kind regards 
+________________________
+Aruba S.p.A.
+Customer Service - Aruba.it
+http://www.aruba.it
+http://support.aruba.it
+Phone: +39.0575.0505
+Fax: +39.0575.862000
+________________________

@@ -1,0 +1,33 @@
+Dear Customer,
+>
+> with this letter we inform you that
+> the  38617974 Renewal Order relating to the Database
+> MS SQL Server has been activated on Date 15/12/2014.
+> The expiration date of the Service is : 15/12/2016.
+>
+> DataBase Host: 62.149.153.39
+> DataBase Name: MSSql101180
+> DataBase Login: MSSql101180
+> DataBase PassWord: 83utrlxpfd
+> DataBase Total Space : 1000 MB
+>
+> We indicate the data for the access to the
+> control panel where you can access and manage your database:
+>
+> http://mssql.aruba.it/
+> DataBase Login : MSSql101180
+> DataBase PassWord : 83utrlxpfd
+>
+> - For more information regarding procedures and details of our services
+>     there is available our Knowledge Base at the address
+>
+> http://kb-en.aruba.it
+>
+> - The guide for the use of all the services and the configuration
+> examples, is available at
+>
+> http://vademecum.aruba.it
+>
+> - A new service for support requests has been activated
+>
+> http://support.aruba.it

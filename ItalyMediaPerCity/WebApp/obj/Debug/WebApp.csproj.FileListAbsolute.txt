@@ -1,0 +1,8 @@
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\bin\WebApp.dll.config
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\bin\WebApp.dll
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\bin\WebApp.pdb
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\bin\Newtonsoft.Json.dll
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\bin\Newtonsoft.Json.xml
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\obj\Debug\WebApp.dll
+E:\documents\Visual Studio 2015\Projects\AbruzzesEMolisano\ItalyMediaPerCity\WebApp\obj\Debug\WebApp.pdb

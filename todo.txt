@@ -1,0 +1,41 @@
+todo
+	unhardcode password (which is now visible on github, ouch (and even explicitly stated in the root directory of the repository, ouch ouch))
+	
+	add location to sample viewable earlier
+
+	translate 
+		"Recording audio is not supported in your browser. Consider using the latest version of Google Chrome or Firefox."
+		"Please select a file"
+		etc.
+	testing
+		different browsers and mobile phones
+
+	model-binding
+	fix javascript model
+	
+	admin panel
+		export to excel
+		
+	maps
+		scale with zoom-level not completely solid
+		auto complete to search and improve semantics (not substring but inverted index based searching or something)
+		
+	admin panel
+		fix http request routing so that "/admin can be used instead of /Admin.aspx"
+	
+	maps
+		move add location and go to page button next to location name field
+
+	security
+		files that are not approved are visible in the API, but should not be GetFile, GetFileMetadata
+		
+	model
+		add trigger/foreign key for file cascade delete
+		parse and set createdAt on local entity in SampleUploader
+		rename .ui-content-inner to .ui-content-thin
+		review naming consistency or domain model (city vs location etc.)
+		fix business/dal layer in javascript, make "Entity" object which includes lazy loading, collections, etc.
+		naming: add/create inconsistency
+	
+	add proxy generator to expose internal (interface) types and use it for ProviderEx
+	

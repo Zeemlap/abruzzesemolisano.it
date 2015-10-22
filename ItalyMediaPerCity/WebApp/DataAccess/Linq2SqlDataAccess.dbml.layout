@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.125" name="Linq2SqlDataAccess">
+  <DataContextMoniker Name="/Linq2SqlDataAccessDataContext" />
+  <nestedChildShapes>
+    <classShape Id="274b3651-effc-416f-ad79-6589c3df4e45" absoluteBounds="0.75, 5.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Linq2SqlDataAccessDataContext/File" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c1b41e8-07c0-4028-91bb-b1e624f34262" absoluteBounds="0.76500000000000012, 5.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f5fcea71-63d9-49b6-8057-c3c917268174" absoluteBounds="1.125, 1.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/Linq2SqlDataAccessDataContext/Location" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab15f961-fc97-4fec-acdc-3831284b4c95" absoluteBounds="1.1400000000000001, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" absoluteBounds="4.75, 3.25, 3, 3.6939111328124996">
+      <DataClassMoniker Name="/Linq2SqlDataAccessDataContext/SampleMetadata" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb0ae37f-4098-4cf6-ae33-e0cbca322242" absoluteBounds="4.7650000000000006, 3.71, 2.9699999999999998, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="beefa4df-bf61-400a-8fc1-47161daf261b" absoluteBounds="5.375, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/Linq2SqlDataAccessDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28ac969b-1ae8-441e-a5fb-f4e773391a2f" absoluteBounds="5.39, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 2.70599609375); (5.03125 : 2.70599609375); (5.03125 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/Location/Location_SampleMetadata" />
+      <nodes>
+        <classShapeMoniker Id="f5fcea71-63d9-49b6-8057-c3c917268174" />
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.19823539195046); (4.75 : 6.19823539195046)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/File/File_SampleMetadata" />
+      <nodes>
+        <classShapeMoniker Id="274b3651-effc-416f-ad79-6589c3df4e45" />
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.78661769597523); (4.75 : 5.78661769597523)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/File/File_SampleMetadata1" />
+      <nodes>
+        <classShapeMoniker Id="274b3651-effc-416f-ad79-6589c3df4e45" />
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.63357326238148); (4.75 : 6.63357326238148)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/File/File_SampleMetadata2" />
+      <nodes>
+        <classShapeMoniker Id="274b3651-effc-416f-ad79-6589c3df4e45" />
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 2.32859537760417); (6.375 : 3.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/User/User_SampleMetadata" />
+      <nodes>
+        <classShapeMoniker Id="beefa4df-bf61-400a-8fc1-47161daf261b" />
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5da311f8-ba26-4b4f-b858-f2a80e98a931" absoluteBounds="3.75, 7.625, 3, 1.1939925130208327">
+      <DataClassMoniker Name="/Linq2SqlDataAccessDataContext/SampleMetadataFieldApproval" />
+      <nestedChildShapes>
+        <elementListCompartment Id="128d82f4-3d8b-469c-bb59-717f6c25c10a" absoluteBounds="3.7649999999999997, 8.085, 2.9699999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 6.9439111328125); (5.75 : 7.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/Linq2SqlDataAccessDataContext/SampleMetadata/SampleMetadata_SampleMetadataFieldApproval" />
+      <nodes>
+        <classShapeMoniker Id="9e5c6b0e-bdd4-4ffa-b3a3-69dc4c64b914" />
+        <classShapeMoniker Id="5da311f8-ba26-4b4f-b858-f2a80e98a931" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
