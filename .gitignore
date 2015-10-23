@@ -1,3 +1,6 @@
 ItalyMediaPerCity/.vs/config/applicationhost.config
 ItalyMediaPerCity/WebApp/bin/
 ItalyMediaPerCity/WebApp/obj/
+*.suo
+ItalyMediaPerCity/packages/
+ItalyMediaPerCity/WebApp/WebApp.csproj.user
