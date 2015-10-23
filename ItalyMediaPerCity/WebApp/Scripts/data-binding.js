@@ -210,12 +210,7 @@
                                 break;
                             case 2:
                                 // attribute node
-                                if ( this.__node.childNodes.length > 0 ) {
-                                    assert( this.__node.childNodes.length === 1 );
-                                    assert( this.__node.childNodes[0].nodeType === 3 );
-                                    assert( this.__node.childNodes[0].childNodes.length === 0 );
-                                    this.__runTextOrAttribute();
-                                }
+                                this.__runTextOrAttribute();
                                 break;
                             case 3:
                                 // text node    
