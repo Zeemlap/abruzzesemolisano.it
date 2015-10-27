@@ -455,8 +455,12 @@
             }
         },
         __setLatitudeLongitude: {
-            value: function ( latitude, longitude ) {
-                this.__gmapsLatLng = new google.maps.LatLng( latitude, longitude );
+            value: function (latitude, longitude) {
+                try {
+                    this.__gmapsLatLng = new google.maps.LatLng( latitude, longitude );
+                } catch (e) {
+                    console.error(e);
+                }
             }
         },
         name: {
