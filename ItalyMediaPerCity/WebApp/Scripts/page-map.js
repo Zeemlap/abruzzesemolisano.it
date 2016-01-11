@@ -596,7 +596,7 @@
     function initialize( map_htmlElement ) {
         var c;
         var mapOptions = {
-            zoom: 10,
+            zoom: 9,
             minZoom: 6,
             maxZoom: 14,
             mapTypeControlOptions: {
@@ -802,7 +802,7 @@
                 t();
 
                 google.maps.event.addListenerOnce(map, 'idle', function () {
-                    map.setCenter({ lat: 42.33037775013451, lng: 14.508781947265579 });
+                    map.setCenter({ lat: 42.13037775013451, lng: 14.508781947265579 });
                 });
                 
             }
