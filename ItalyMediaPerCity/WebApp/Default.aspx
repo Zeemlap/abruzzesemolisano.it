@@ -336,7 +336,7 @@ Grazie!</div>
                 <li style="padding: 0 1em;" class="item-template"><span style="padding-top:1.2em;float: left;" data-role="none">{name}</span><button data-icon="audio" style="width: auto; float: right;" data-command="{play}">Play</button></li>
             </ul>
             <ul id="samplesMetadata" data-role="listview" style="margin-top:0;">
-                <li style="padding: 0 1em;" class="item-template"><span style="padding-top:1.2em;float: left;" data-role="none">{name}</span>
+                <li style="padding: 0 1em;" class="item-template"><span style="padding-top:1.2em;float: left;" data-role="none">{title}</span>
                 
                     <button data-icon="audio" style="width: auto; float: right;" data-command="{play}">Play</button>
                     <button data-icon="search" style="width: auto; float: right; margin-right: 0.5em;" data-command="{view}">Dati</button>

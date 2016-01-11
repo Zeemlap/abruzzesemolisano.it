@@ -52,6 +52,9 @@
         },
         __city__sampleMetadatas_listChanged: {
             value: function (lcea) {
+                for (var i = 0; i < lcea._newItems.length; i++) {
+                    lcea._newItems[i].__title = this.__city.__name + ' ' + (i + 1);
+                }
                 this.__update();
             }
         },

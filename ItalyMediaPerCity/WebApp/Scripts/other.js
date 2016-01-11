@@ -40,6 +40,7 @@
 
     function SampleMetadata() {
         this.__name = null;
+        this.__title = null;
         this.__id = null;
         this.__sampleDataFileId = 0;
         this.__gender = null;
@@ -118,6 +119,17 @@
                     throw Error();
                 }
                 this.__name = value;
+            }
+        },
+        title: {
+            get: function () {
+                return this.__title;
+            },
+            set: function (value) {
+                if (typeof value !== "string") {
+                    throw Error();
+                }
+                this.__title = value;
             }
         },
         id: {
