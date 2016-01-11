@@ -294,8 +294,7 @@ Grazie!</div>
               </p>
           <p>
             <h3>Cosa fare</h3>
-            Vai dalla persona che vuoi registrare e chiedile di parlare per 10 minuti, raccontando la sua giovinezza, o la guerra, o un argomento a piacere, e registrala con il tuo telefonino (o con una videocamera). (formats? We need to say something, right?)
-        I formati ammessi sono .mp3, .mp4, ...?
+            Vai dalla persona che vuoi registrare e chiedile di parlare per 10 minuti, raccontando la sua giovinezza, o la guerra, o un argomento a piacere, e registrala con il tuo telefonino (o con una videocamera). I formati ammessi sono .mp3, .mp4, ...
               </p>
           <p>
         Entra nel sito (<a href="javascript:;" data-x-nav="page-map">clicca su Vai alla mappa</a>), seleziona il cerchietto che corrisponde al tuo paese, e fai l’upload dell’audio o del video che hai registrato.
