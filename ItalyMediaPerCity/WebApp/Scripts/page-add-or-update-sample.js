@@ -671,7 +671,7 @@
             value: function () {
                 var t1, t2;
                 if ( this.__isSubmitting ) {
-                    throw Error();
+                    return;
                 }
                 var _this = this;
                 if ( this.__location === null ) {
@@ -735,9 +735,12 @@
                     }
                 }
                 this.__isSubmitting = true;
-                var approvedFields = {};
+                var approvedFields = {},
+                    saveBtnText = $('.save:eq(0)').text();
+                $('.save').text('Salvando...');
                 if ( this.isInUpdateMode ) {
                     BusinessLogic.instance.updateSampleAsync( t1, function ( smd, fCompletedSynchronously, fError ) {
+                        $('.save').text(saveBtnText);
                         _this.__onSubmitAsync_onCompleted( true, fError );
                     } );
                 } else {
@@ -745,6 +748,7 @@
                         throw Error();
                     }
                     BusinessLogic.instance.createSampleAsync( t1, function ( fError ) {
+                        $('.save').text(saveBtnText);
                         _this.__onSubmitAsync_onCompleted( false, fError );
                     } );
                 } 
