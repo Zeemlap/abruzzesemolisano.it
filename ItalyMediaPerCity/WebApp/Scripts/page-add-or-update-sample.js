@@ -737,7 +737,7 @@
                 this.__isSubmitting = true;
                 var approvedFields = {},
                     saveBtnText = $('.save:eq(0)').text();
-                $('.save').text('Salvando...');
+                $('.save').text('Salvataggio in corso...');
                 if ( this.isInUpdateMode ) {
                     BusinessLogic.instance.updateSampleAsync( t1, function ( smd, fCompletedSynchronously, fError ) {
                         $('.save').text(saveBtnText);
