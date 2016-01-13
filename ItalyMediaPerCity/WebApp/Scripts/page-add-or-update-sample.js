@@ -736,8 +736,9 @@
                 }
                 this.__isSubmitting = true;
                 var approvedFields = {},
-                    saveBtnText = $('.save:eq(0)').text();
-                $('.save').text('Salvataggio in corso...');
+                    saveBtnText = $('.save:eq(0) .text').text();
+                $('.save .progress').text('')
+                $('.save').addClass('busy').find('.text').text('Salvataggio in corso...');
                 if ( this.isInUpdateMode ) {
                     BusinessLogic.instance.updateSampleAsync( t1, function ( smd, fCompletedSynchronously, fError ) {
                         $('.save').text(saveBtnText);
@@ -748,7 +749,7 @@
                         throw Error();
                     }
                     BusinessLogic.instance.createSampleAsync( t1, function ( fError ) {
-                        $('.save').text(saveBtnText);
+                        $('.save').removeClass('busy').find('.text').text(saveBtnText);
                         _this.__onSubmitAsync_onCompleted( false, fError );
                     } );
                 } 

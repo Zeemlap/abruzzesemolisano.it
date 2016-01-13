@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Content/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="Content/redactor/redactor.css" />
+    <style type="text/css">
+        .save:not(.busy) > .progress {
+            display: none;
+        }
+    </style>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="Scripts/jquery.validate.js"></script>
@@ -360,7 +365,7 @@ Grazie!</div>
             <div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
                 
                 <button data-icon="delete" class="delete if-is-in-update-mode">Delete</button>
-                <button data-icon="check" class="save">Salva</button>
+                <button data-icon="check" class="save"><span class="text">Salva</span><span class="progress"></span></button>
                 <button data-x-nav="page-map-instructions" data-icon="info" data-iconpos="right" style="width: 0; padding-right: 1.6em;">&nbsp;</button>
             </div>
         </div>
@@ -456,7 +461,7 @@ Grazie!</div>
                         <button data-icon="delete" class="delete">Delete</button>
                     </div>
 
-                    <button data-icon="check" class="save">Salva</button>
+                    <button data-icon="check" class="save"><span class="text">Salva</span><span class="progress"></span></button>
                 </td><td>
                 </td></tr></tbody></table>
             </div>

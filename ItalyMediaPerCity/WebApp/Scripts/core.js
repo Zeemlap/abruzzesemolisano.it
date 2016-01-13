@@ -17,6 +17,7 @@
         ObjectWithEvents.call(this);
         var keys = Object.getOwnPropertyNames(opts);
         this.__body = null;
+        this.__progress = null;
         this.__retry_triggerOnNonTimeoutError = false;
         this.__retry_delay = 100;
         this.__timeout = 1 / 0;
@@ -55,6 +56,12 @@
                 case "body":
                     this.__body = opts.body;
                     if ( !( this.__body instanceof HttpRequestBody ) ) {
+                        throw Error();
+                    }
+                    break;
+                case "progress":
+                    this.__progress = opts.progress;
+                    if (typeof(this.__progress) !== 'function') {
                         throw Error();
                     }
                     break;
@@ -100,6 +107,9 @@
                     this.__hreq_onReadyStateChangeFunc = this.__hreq_onReadyStateChange.bind( this );
                 }
                 this.__hreq.onreadystatechange = this.__hreq_onReadyStateChangeFunc;
+                if (this.__progress !== null) {
+                    this.__hreq.addEventListener('progress', this.__progress);
+                }
                 this.__hreq.open( this.__method, this.__url );
                 if ( this.__body === null ) {
                     this.__hreq.send();

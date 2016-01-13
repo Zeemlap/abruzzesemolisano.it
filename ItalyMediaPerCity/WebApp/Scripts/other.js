@@ -284,7 +284,13 @@
                     method: "POST",
                     url: "DefaultHandler.ashx?action=CreateSample",
                     body: this.__httpReqBody,
-                    retry_triggerOnNonTimeoutError: true
+                    retry_triggerOnNonTimeoutError: true,
+                    progress: function(e) {
+                        if (e.lengthComputable) {
+                            var percentComplete = Math.round(e.loaded / e.total * 100) + '%';
+                            $('.save .progress').text(' (' + percentComplete + ')');
+                        }
+                    }
                 } );
                 this.__httpReq.addListener( "completed", this.__httpReq_onCompleted, this );
                 this.__httpReq.send();
