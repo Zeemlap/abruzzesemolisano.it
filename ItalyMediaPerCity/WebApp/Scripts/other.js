@@ -123,6 +123,9 @@
         },
         title: {
             get: function () {
+                if (!this.__isAnonymous) {
+                    return this.__name;
+                }
                 return this.__title;
             },
             set: function (value) {
