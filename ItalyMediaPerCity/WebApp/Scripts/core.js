@@ -108,7 +108,7 @@
                 }
                 this.__hreq.onreadystatechange = this.__hreq_onReadyStateChangeFunc;
                 if (this.__progress !== null) {
-                    this.__hreq.addEventListener('progress', this.__progress);
+                    this.__hreq.upload.addEventListener('progress', this.__progress);
                 }
                 this.__hreq.open( this.__method, this.__url );
                 if ( this.__body === null ) {
