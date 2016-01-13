@@ -284,7 +284,6 @@
                     method: "POST",
                     url: "DefaultHandler.ashx?action=CreateSample",
                     body: this.__httpReqBody,
-                    timeout: 10000,
                     retry_triggerOnNonTimeoutError: true
                 } );
                 this.__httpReq.addListener( "completed", this.__httpReq_onCompleted, this );
@@ -1157,7 +1156,7 @@
         },
 
         getAllLocationsAsync: {
-            value: function ( callbackFunction ) {
+            value: function (callbackFunction) {
                 return this.__locations.getAllAsync( callbackFunction );
             }
         },
