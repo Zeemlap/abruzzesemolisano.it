@@ -721,7 +721,7 @@
     } );
 
 
-    var timeout = 10000;
+    var timeout = 1/0;
     function CachedEntitySet( entityConstructor, entitySetName ) {
         Object.call( this );
         this.__getAllRequest = null;
