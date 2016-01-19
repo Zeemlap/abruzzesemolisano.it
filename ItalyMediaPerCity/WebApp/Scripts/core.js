@@ -1335,7 +1335,7 @@
         return pojo;
     }
 
-    function FileInput( htmlElement, name ) {
+    function FileInput( htmlElement, name, maxSizeMB ) {
         var jqFileInputElems;
         var jqFileNameElems;
         var flag1 = true;
@@ -1360,6 +1360,15 @@
             this.__fileReader = null;
             this.__fileReader_isAborted = false;
             flag1 = false;
+            this.__maxSize = maxSizeMB;
+            if (typeof(this.__maxSize) === 'number') {
+                var jqFileInputErrorElems = $( ".file-error", htmlElement );
+                if (jqFileInputErrorElems.length === 1) {
+                    this.__fileInputErrorElem = jqFileInputErrorElems[0];
+                } else {
+                    this.__fileInputErrorElem = null;
+                }
+            }
         } finally {
             if ( flag1 ) {
                 FormField.prototype.dispose.call( this );
@@ -1406,6 +1415,13 @@
                     fileNameOverride = t1.length === 0 ? null : t1;
                 }
                 this.setFile( file, fileNameOverride );
+                // check maximum size
+                if (typeof(this.__maxSize) === 'number') {
+                    var fileSize = this.__fileInputElem.files[0].size / 1024 / 1024;
+                    if (this.__fileInputErrorElem !== null) {
+                        this.__fileInputErrorElem.classList.toggle('hidden', (fileSize <= this.__maxSize));
+                    }
+                }
             }
         },
 

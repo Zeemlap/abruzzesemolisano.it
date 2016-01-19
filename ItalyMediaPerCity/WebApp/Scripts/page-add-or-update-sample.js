@@ -76,7 +76,7 @@
         this.__sampleDataTypeEnum = null;
         this.__audRecStartBtn.addEventListener( "click", this.__audRecStartBtn_onClick.bind( this ), false );
         this.__audRecStopBtn.addEventListener( "click", this.__audRecStopBtn_onClick.bind( this ), false );
-        this.__audioFile = new FileInput( htmlElem_get( '#sample-data-file', this.htmlElement ), "sampleDataFile" );
+        this.__audioFile = new FileInput( htmlElem_get( '#sample-data-file', this.htmlElement ), "sampleDataFile", 199 );
         this.__audioFile_externalId = null;
         this.__transcriptionFile = new FileInput( htmlElem_get( "#transcription-file", this.htmlElement ), "transcriptionFile" );      
         this.__transcriptionFile_externalId = null;
@@ -741,7 +741,7 @@
                 $('.save').addClass('busy').find('.text').text('Salvataggio in corso...');
                 if ( this.isInUpdateMode ) {
                     BusinessLogic.instance.updateSampleAsync( t1, function ( smd, fCompletedSynchronously, fError ) {
-                        $('.save').text(saveBtnText);
+                        $('.save').removeClass('busy').find('.text').text(saveBtnText);
                         _this.__onSubmitAsync_onCompleted( true, fError );
                     } );
                 } else {

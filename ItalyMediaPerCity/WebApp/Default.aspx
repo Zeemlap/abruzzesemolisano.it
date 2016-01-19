@@ -7,11 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Content/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="Content/redactor/redactor.css" />
-    <style type="text/css">
-        .save:not(.busy) > .progress {
-            display: none;
-        }
-    </style>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="Scripts/jquery.validate.js"></script>
@@ -54,6 +49,10 @@
         <script type="text/javascript" src="Scripts/redactor/redactor.js"></script>
     -->
     <style type="text/css">
+        .save:not(.busy) > .progress {
+            display: none;
+        }
+
         .table-collapsed {
             border-spacing: 0;
             border-collapse: collapse;
@@ -115,7 +114,15 @@
             margin: 0 0 0 0.5em;
         }
 
-
+        .hidden {
+            display: none;
+        }
+        .file-error {
+            margin: 0.5em 0px;
+            font-size: 85%;
+            text-align: center;
+            color: rgb(189, 0, 38);
+        }
     </style>
 </head>
 <body>
@@ -378,6 +385,7 @@ Grazie!</div>
                             <div class="file-name ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset" style="margin: 0; padding: 0.7em 1em; font-size: 16px;">&nbsp;</div>
                             <button style="border-top-left-radius: 0; border-bottom-left-radius: 0; position: absolute; right: 0; top: 0; width: auto; margin: 0;">Seleziona il file</button>
                             <input class="hidden" data-role="none" style="display:block; opacity: 0; position: absolute; width: 100%; top: 0; bottom: 0;" type="file" accept="audio/*;capture=microphone">
+                            <div class="file-error hidden">The selected file is too big, maximum allowed size is 200&nbsp;MB</div>
                         </div>
                         <button id="start-recording-audio" class="audio-recording-supported" style="float: left; box-sizing: border-box; width: 33%; border-top-right-radius: 0; border-bottom-right-radius: 0; border-right-width: 0;">
                             <span class="record-icon" style="position: relative;display:inline-block;background-color:black;border-radius:0.5em;width:1em;height:1em;left:-0.5em;top:0.1em;"></span>Registra
