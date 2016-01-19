@@ -734,6 +734,8 @@
                         t1.translationFileId = this.__translationFile_externalId;
                     }
                 }
+                // invert the isAnonymou/s checkbox, because the text is the opposite
+                t1.isAnonymous = !t1.isAnonymous;
                 this.__isSubmitting = true;
                 var approvedFields = {},
                     saveBtnText = $('.save:eq(0) .text').text();
