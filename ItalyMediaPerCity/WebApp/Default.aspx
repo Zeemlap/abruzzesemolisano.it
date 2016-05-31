@@ -36,7 +36,7 @@
             currency: "Inserisci una valuta valida"
         });
     </script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTjc4KFqfCbhQ-64PjFcDZW5kEiBlLfdc&libraries=geocoding"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geocoding"></script>
     <script type="text/javascript" src="Scripts/events.js"></script>  
     <script type="text/javascript" src="Scripts/core.js"></script>
     <script type="text/javascript" src="Scripts/composite-formatting.js"></script> 
